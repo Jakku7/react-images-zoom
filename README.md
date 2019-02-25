@@ -5,9 +5,8 @@
 A simple, responsive lightbox React JS component for displaying an array of images with zooming and rotating capabilities.
 This is a fork of [jossmac/react-images](https://github.com/jossmac/react-images) and [simokhalil/react-images-extended](https://github.com/simokhalil/react-images-extended)
 
-### Why this fork ?
-I needed something like jossmac's react-images but with extended features like zooming and rotating, with the ability to save selelcted zoom level (scaling) and rotation angle via API, and re-apply them initially on get.
-
+### Why this fork?
+Fork is based on xiaoman885 react-images-zoom repository. I needed it to add additional stuff and make some small fixed for zoom and rotate features. 
 
 ### Quick start
 
