@@ -1,7 +1,7 @@
 {
   "name": "react-images-zoom",
-  "version": "1.0.6",
-  "description": "A simple, responsive lightbox component for displaying an array of images with React.js with extended features",
+  "version": "1.0.0-alpha",
+  "description": "Fork of react-images-zoom repository",
   "main": "lib/Lightbox.js",
   "jsnext:main": "dist/react-images.es.js",
   "author": "Khalil EL ISMAILI",
