@@ -273,10 +273,9 @@ class Lightbox extends Component {
 		return img;
 	}
 	gotoNext (event) {
-		const { currentImage, images } = this.props;
+		const { currentImage, images, loop } = this.props;
 		const { imageLoaded } = this.state;
-
-		if (!imageLoaded || currentImage === (images.length - 1)) return;
+		if (!imageLoaded || (!loop && currentImage === (images.length - 1))) return;
 
 		if (event) {
 			event.preventDefault();
@@ -286,10 +285,10 @@ class Lightbox extends Component {
 		this.props.onClickNext();
 	}
 	gotoPrev (event) {
-		const { currentImage } = this.props;
+		const { currentImage, loop } = this.props;
 		const { imageLoaded } = this.state;
 
-		if (!imageLoaded || currentImage === 0) return;
+		if (!imageLoaded || (!loop && currentImage === 0)) return;
 
 		if (event) {
 			event.preventDefault();
@@ -327,7 +326,7 @@ class Lightbox extends Component {
 	// RENDERERS
 	// ==============================
 	renderArrowPrev () {
-		if (this.props.currentImage === 0) return null;
+		if (!this.props.loop && this.props.currentImage === 0) return null;
 
 		return (
 			<Arrow
@@ -340,7 +339,7 @@ class Lightbox extends Component {
 		);
 	}
 	renderArrowNext () {
-		if (this.props.currentImage === (this.props.images.length - 1)) return null;
+		if (!this.props.loop && this.props.currentImage === (this.props.images.length - 1)) return null;
 
 		return (
 			<Arrow
@@ -533,6 +532,7 @@ Lightbox.propTypes = {
 	).isRequired,
 	isOpen: PropTypes.bool,
 	leftArrowTitle: PropTypes.string,
+	loop: PropTypes.bool,
 	onClickImage: PropTypes.func,
 	onClickNext: PropTypes.func,
 	onClickPrev: PropTypes.func,
@@ -560,6 +560,7 @@ Lightbox.defaultProps = {
 	enableKeyboardInput: true,
 	imageCountSeparator: ' of ',
 	leftArrowTitle: 'Previous (Left arrow key)',
+	loop: false,
 	onClickShowNextImage: true,
 	preloadNextImage: true,
 	preventScroll: true,
