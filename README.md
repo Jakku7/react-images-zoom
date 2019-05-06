@@ -45,7 +45,7 @@ export default class Sample extends React.Component {
 ##  Loop example
 To add a loop to your lightbox gallery you need to add a loop prop to your component and tell lightbox what to do when condition is met. Like: 
 
-  gotoPrevious() {
+```gotoPrevious() {
     this.setState({
       currentImage: this.state.currentImage - 1,
     });
@@ -65,6 +65,7 @@ To add a loop to your lightbox gallery you need to add a loop prop to your compo
       });
     }
   }
+```
 
 ##  Examples
 
