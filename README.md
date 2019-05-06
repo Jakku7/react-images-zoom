@@ -30,7 +30,7 @@ export default class Sample extends React.Component {
       <Lightbox
         images={[{ src: 'http://example.com/img1.jpg' }, { src: 'http://example.com/img2.jpg' }]}
         isOpen={this.state.lightboxIsOpen}
-         loop
+        loop
         onClickPrev={this.gotoPrevious}
         onClickNext={this.gotoNext}
         onClose={this.closeLightbox}
@@ -123,6 +123,7 @@ images  | array | undefined | Required. Array of image objects See image options
 imageCountSeparator  | String  | ' of ' | Customize separator in the image count
 isOpen  | bool  | false | Whether or not the lightbox is displayed
 leftArrowTitle | string | ' Previous (Left arrow key) ' | Customize of left arrow title
+loop | bool | false | Enables loop for lightbox gallery
 onClickPrev | func | undefined | Fired on request of the previous image
 onClickNext | func | undefined | Fired on request of the next image
 onClose | func | undefined | Required. Handle closing of the lightbox
