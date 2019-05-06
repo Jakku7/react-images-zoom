@@ -6,7 +6,7 @@ A simple, responsive lightbox React JS component for displaying an array of imag
 This is a fork of [jossmac/react-images](https://github.com/jossmac/react-images) and [simokhalil/react-images-extended](https://github.com/simokhalil/react-images-extended)
 
 ### Why this fork?
-Fork is based on xiaoman885 react-images-zoom repository. I needed it to add additional stuff and make some small fixes for zoom and rotate features. 
+Fork is based on xiaoman885 react-images-zoom repository. I needed it to add additional stuff and make some small fixes for zoom and rotate features. There is also "loop" prop added. If enabled, it prevents arrow images from being hidden on last/first image. 
 
 ### Quick start
 
