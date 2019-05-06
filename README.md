@@ -30,6 +30,7 @@ export default class Sample extends React.Component {
       <Lightbox
         images={[{ src: 'http://example.com/img1.jpg' }, { src: 'http://example.com/img2.jpg' }]}
         isOpen={this.state.lightboxIsOpen}
+         loop
         onClickPrev={this.gotoPrevious}
         onClickNext={this.gotoNext}
         onClose={this.closeLightbox}
@@ -41,7 +42,29 @@ export default class Sample extends React.Component {
   }
 }
 ```
+##  Loop example
+To add a loop to your lightbox gallery you need to add a loop prop to your component and tell lightbox what to do when condition is met. Like: 
 
+  gotoPrevious() {
+    this.setState({
+      currentImage: this.state.currentImage - 1,
+    });
+    if (this.state.currentImage === 0) {
+      this.setState({
+        currentImage: this.props.images.length - 1,
+      });
+    }
+  }
+  gotoNext() {
+    this.setState({
+      currentImage: this.state.currentImage + 1,
+    });
+    if (this.state.currentImage === this.props.images.length - 1) {
+      this.setState({
+        currentImage: 0,
+      });
+    }
+  }
 
 ##  Examples
 
