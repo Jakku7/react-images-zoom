@@ -7,7 +7,8 @@
   "author": "Jakub Gluba",
   "license": "MIT",
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/jakku7/react-images-zoom"
   },
   "dependencies": {
     "aphrodite": "^0.5.0",
