@@ -1,14 +1,14 @@
 {
-  "name": "react-images-zoom",
-  "version": "1.0.0-alpha",
+  "name": "react-images-zoom-loop",
+  "version": "1.0.1-alpha",
   "description": "Fork of react-images-zoom repository",
   "main": "lib/Lightbox.js",
   "jsnext:main": "dist/react-images.es.js",
-  "author": "Khalil EL ISMAILI",
+  "author": "Jakub Gluba",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaoman885/react-images-zoom"
+    "url": "https://github.com/jakku7/react-images-zoom-loop"
   },
   "dependencies": {
     "aphrodite": "^0.5.0",
