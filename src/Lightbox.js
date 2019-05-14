@@ -410,7 +410,7 @@ class Lightbox extends Component {
 			transform: `rotate(${this.state.rotate}deg) scaleX(${this.state.scaleX}) scaleY(${this.state.scaleY})`,
 		};
 		return (
-			<figure className={css(this.classes.figure)} onMouseMove={this.props.onMouseMoveFun} onMouseDown={this.props.onMouseDownFun} onMouseUp={this.props.onMouseUpFun}>
+			<figure className={css(this.classes.figure)} onMouseMove={this.props.onMouseMoveFun} onMouseDown={this.props.onMouseDownFun} onMouseUp={this.props.onMouseUpFun} onTouchMove={this.props.onTouchMove} onTouchStart={this.props.onTouchStart} onTouchEnd={this.props.onTouchEnd}>
 				{/*
 					Re-implement when react warning "unknown props"
 					https://fb.me/react-unknown-prop is resolved
