@@ -413,7 +413,7 @@ class Lightbox extends Component {
 		let imgStyle = {
 			width: `${this.state.width}px`,
 			height: 'auto',
-			transform: 'rotate(' + this.state.rotate + 'deg) scaleX(' + this.props.zoomLevel || this.state.scaleX + ') scaleY(' + this.props.zoomLevel || this.state.scaleY + ')',
+			transform: 'rotate(' + this.state.rotate + 'deg) scaleX(' + this.props.zoomLevel + ') scaleY(' + this.props.zoomLevel + ')',
 		};
 		return (
 			<figure className={css(this.classes.figure)} onMouseMove={this.props.onMouseMoveFun} onMouseDown={this.props.onMouseDownFun} onMouseUp={this.props.onMouseUpFun} onTouchMove={this.props.onTouchMove} onTouchStart={this.props.onTouchStart} onTouchEnd={this.props.onTouchEnd}>
