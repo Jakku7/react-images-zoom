@@ -151,14 +151,20 @@ class Lightbox extends Component {
 				}
 				break;
 			case ActionType.zoomIn:
-				let imgCenterXY = this.getImageCenterXY();
-				this.handleZoom(imgCenterXY.x, imgCenterXY.y, 1, 0.1);
-				this.props.onZoomIn && this.props.onZoomIn();
+					if (this.props.onZoomIn) {
+						this.props.onZoomIn();
+					} else {
+						let imgCenterXY = this.getImageCenterXY();
+						this.handleZoom(imgCenterXY.x, imgCenterXY.y, 1, 0.1);
+					}
 				break;
 			case ActionType.zoomOut:
-				let imgCenterXY2 = this.getImageCenterXY();
-				this.handleZoom(imgCenterXY2.x, imgCenterXY2.y, -1, 0.1);
-				this.props.onZoomOut && this.props.onZoomOut();
+					if (this.props.onZoomOut) {
+						this.props.onZoomOut();
+					} else {
+						let imgCenterXY2 = this.getImageCenterXY();
+						this.handleZoom(imgCenterXY2.x, imgCenterXY2.y, -1, 0.1);
+					}
 				break;
 			case ActionType.rotateLeft:
 				this.handleRotate();
@@ -407,7 +413,7 @@ class Lightbox extends Component {
 		let imgStyle = {
 			width: `${this.state.width}px`,
 			height: 'auto',
-			transform: `rotate(${this.state.rotate}deg) scaleX(${this.state.scaleX}) scaleY(${this.state.scaleY})`,
+			transform: 'rotate(' + this.state.rotate + 'deg) scaleX(' + this.props.zoomLevel || this.state.scaleX + ') scaleY(' + this.props.zoomLevel || this.state.scaleY + ')',
 		};
 		return (
 			<figure className={css(this.classes.figure)} onMouseMove={this.props.onMouseMoveFun} onMouseDown={this.props.onMouseDownFun} onMouseUp={this.props.onMouseUpFun} onTouchMove={this.props.onTouchMove} onTouchStart={this.props.onTouchStart} onTouchEnd={this.props.onTouchEnd}>

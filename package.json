@@ -1,6 +1,6 @@
 {
   "name": "react-images-zoom-loop",
-  "version": "1.0.6-alpha",
+  "version": "1.0.7-alpha",
   "description": "Fork of react-images-zoom repository",
   "main": "lib/Lightbox.js",
   "jsnext:main": "dist/react-images.es.js",
